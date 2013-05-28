@@ -1,0 +1,46 @@
+commit f7c087c25d6396b87fd57392775312396894599f
+Author: monchoz <ramonzuniga9@gmail.com>
+Date:   Mon May 27 23:25:41 2013 -0600
+
+    Agregue mi nombre
+
+commit 6489cf725b298b72031cc4478d9c6b3542a5a3eb
+Author: Daniel Ortiz <jdoavila@gmail.com>
+Date:   Sun May 26 23:16:25 2013 -0600
+
+    Nuevos archivos.
+    
+    Creé archivos vacíos para que github cree las carpetas dentro del
+    repositorio.
+
+commit cf4bc65d23cc14656a0e4e4a1dcd574589914996
+Author: Daniel Ortiz <jdoavila@gmail.com>
+Date:   Sun May 26 23:12:18 2013 -0600
+
+    css
+
+commit 0286b0524bf90498045d73f199409b849e1f0a02
+Author: Daniel Ortiz <jdoavila@gmail.com>
+Date:   Sun May 26 23:10:33 2013 -0600
+
+    Nuevos folders
+    
+    static, img, css, js
+
+commit 0db8423f44f4a6c9755c74cb9f16e37976a927a2
+Author: Daniel Ortiz <jdoavila@gmail.com>
+Date:   Sun May 26 23:07:07 2013 -0600
+
+    configuracion completa "setting.py"
+
+commit da02db1458f475dfd343d2085430dec10a66ab3b
+Author: Ramon Zuniga <ramonzuniga9@gmail.com>
+Date:   Sun May 26 23:46:00 2013 -0500
+
+    Update README.md
+
+commit c08b8170a644bc0c1be4f161a96c463c14919d71
+Author: Daniel Ortiz <jdoavila@gmail.com>
+Date:   Sun May 26 22:40:12 2013 -0600
+
+    django commit
