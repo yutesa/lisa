@@ -9,8 +9,7 @@ from django.contrib.auth.decorators import login_required
 def inicio(request):
 	if request.method=='POST':
 		formulario = UserCreationForm(request.POST)
-		frmRegister = UserCreationForm()
-		if formulario.is_valid:
+		if formulario.is_valid():
 			formulario.save()
 			return HttpResponseRedirect('/')
 	else:

@@ -18,9 +18,9 @@
     <aside>
         <h3>¡Registrate!</h3>
         <p>Queremos que seas parte de nosotros, registrate llenando los siguientes datos.</p>
-        <form id="formulario" method="post" action="">{% csrf_token %}
+        <form id='formulario' method='post' action=''>{% csrf_token %}
             {{ formulario.as_p }}
-            <input id="btnSignUp" type="submit" value="Registrar">
+            <p><input id="btnSignUp" type="submit" value="Registrar"></p>
         </form>
     </aside>
 {% endblock %}
