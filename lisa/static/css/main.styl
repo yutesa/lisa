@@ -1,0 +1,215 @@
+@import "icons.styl"
+
+html,
+button,
+input,
+select,
+textarea, 
+    color #222
+
+
+body 
+    font 16px/26px Helvetica, Helvetica Neue, Arial
+    font-size 1em
+    line-height 1.4
+
+header 
+    figure
+        height 128px
+        width 128px
+    img
+        width 100%
+
+    #logo
+        margin 1em        
+    
+  
+
+
+::-moz-selection 
+    background #b3d4fc
+    text-shadow none
+
+
+::selection 
+    background #b3d4fc
+    text-shadow none
+
+
+hr 
+    display block
+    height 1px
+    border 0
+    border-top 1px solid #ccc
+    margin 1em 0
+    padding 0
+
+
+img 
+    vertical-align middle
+
+
+fieldset 
+    border 0
+    margin 0
+    padding 0
+
+
+textarea 
+    resize vertical
+
+
+.chromeframe 
+    margin 0.2em 0
+    background #ccc
+    color #000
+    padding 0.2em 0
+
+    
+.wrapper 
+    margin 0 5%
+    width 90%
+
+
+.header-container 
+    background #036564
+    border-bottom 10px solid #2F1700
+    width 100%
+
+
+.title 
+    color white
+    font-size 3em
+
+
+nav 
+    a 
+        border-radius 50px
+        cursor pointer
+        display block
+        margin 0
+        margin-bottom 10px
+        padding 25px
+
+        text-align center
+        text-decoration none
+        font-weight bold
+        font-size 1.2em
+
+        color #DDD
+    
+    a:hover,
+    a:visited
+        color #DDD
+        
+    a:hover
+        background #FB174C
+        border-radius 50px
+        font-style italic
+        
+
+    ul
+        margin 0.2em 1em 5em
+        padding 0
+
+.main 
+    padding 30px 0
+
+.main 
+    article h1
+        font-size 2em   
+    
+    aside 
+        color #413D3D
+        background #F0D8A8
+        border-top 20px solid #2F1700
+        padding 0px 5% 10px
+
+    button 
+        margin 1em 0
+
+    input 
+        font-style italic
+        margin 5px 0
+        padding 5px 20px 5px 5px
+
+    .item
+        background white
+        border 2px solid #DDD
+        border-radius 0.5em
+        padding 0.5em 0.5em
+        overflow hidden
+        margin 1em 0.5em 0 0
+
+        .product-image
+            float right
+            padding-top 5%
+
+        .product-price
+            font-style italic
+
+        .product-title
+            a
+                text-decoration none
+                width 80%
+        .votes
+            a
+                padding 0 0.4em
+                text-decoration none
+                transition all 0.2s ease
+            
+            div
+                display inline
+
+            .like
+                color #7142FF
+            
+            .like:hover
+                color #FB174C
+                font-weight bold
+
+            .UnLike                                
+                color #7142FF
+
+            .UnLike:hover
+                color #FB174C
+                font-weight bold
+
+
+    .item:hover
+        border 2px solid #FB174C
+        -moz-box-shadow    1px 1px 2px 3px #ccc
+        -webkit-box-shadow 1px 1px 2px 3px #ccc
+        box-shadow         1px 1px 2px 3px #ccc
+
+
+.footer-container 
+    background #383028
+    border-top 20px solid #FFDE6D
+
+.footer-container 
+    a
+        color #FFFFFF
+        text-decoration none
+
+    article 
+        background-color #678A5B
+        color #BCE869
+        padding 40px
+        overflow hidden
+        font-weight bold
+    
+    footer 
+        color white
+        height 318px
+        padding 20px 0
+
+      
+/* ===============
+    ALL IE Fixes
+   =============== */
+
+.ie7 .title 
+    padding-top 20px
+
+@import "responsive.styl"
