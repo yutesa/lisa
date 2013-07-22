@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'yutesapp.views.inicio'),
-    url(r'^Products/', 'yutesapp.views.Products'),
+    url(r'^Products/', 'yutesapp.views.Productos'),
+    url(r'^Products/AddLike$', 'yutesapp.views.DarLike', name='DarLike'),
 )

@@ -33,11 +33,10 @@ class Products(models.Model):
 	ProductProductsStatusId = models.ForeignKey(ProductsStatus)
 	ProductName = models.CharField(max_length=100, help_text='Nombre del Producto', verbose_name=u'Nombre')
 	ProductDescription = models.TextField(max_length=500, help_text='Drescripción del Producto', verbose_name=u'Descripción')
-	ProductPrice = models.DecimalField(max_digits=3, decimal_places=2, help_text='Precio del Producto', verbose_name=u'Precio')
-	ProductOfferPrice = models.DecimalField(max_digits=3, decimal_places=2, help_text='Precio en Oferta', verbose_name=u'Precio Oferta')
+	ProductImage = models.ImageField(upload_to='products', verbose_name=u'Imágen del Producto')
+	ProductPrice = models.DecimalField(max_digits=6, decimal_places=2, help_text='Precio del Producto', verbose_name=u'Precio')
+	ProductOfferPrice = models.DecimalField(max_digits=6, decimal_places=2, help_text='Precio en Oferta', verbose_name=u'Precio Oferta')
 	ProductQuantity = models.IntegerField()
-	ProductLikes = models.IntegerField(null=True)
-	ProductUnlike = models.IntegerField(null=True)
 
 	def __unicode__(self):
 		return self.ProductName
@@ -47,7 +46,6 @@ class UsersLikesUnlikes(models.Model):
 	UserLikeUnlikeUserId = models.ForeignKey(User)
 	UserLikeUnlikeProductId = models.ForeignKey(Products)
 	UserLikeUnlikeType = models.IntegerField()
-	UserLikeUnlikeValue = models.BooleanField()
 
 	def __unicode__(self):
 		return self.UserLikeUnlikeId

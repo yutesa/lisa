@@ -2,124 +2,38 @@
 {% block titulo %} Productos {% endblock %}
 
 {% block contenido %}
+    {% for dato in datos %}
     <article class="item">
        <figure class="product-image">
-            <img src="" alt="Product Name" />
+            <img src="{{MEDIA_URL}}{{dato.ProductImage}}" alt="Product Name" />
         </figure>
         <h2 class="product-title">
-            <a href="#">Product Title</a>
+            <a href="#">{{dato.ProductName}}</a>
         </h2>
         <h3 class="product-stock">
-            Disponible: 2
+            Disponible: {{dato.ProductQuantity}}
         </h3>
         <div class="product-price">
             <p class="price">
-                $200.00
+                ${{dato.ProductPrice}}
             </p>
         </div>
         <div class="votes">
+            <form id="frmLike" method="post" action="AddLike">
+                <input type="hidden" name="Like" value="1">
+                <input type="hidden" name="ProducID"
+                <input id="like" class="icon-heart like" type="submit" name="btnLike" value="Like">
+            </form>
+            <form id="frmUnLike" method="post" action="AddUnLike">
+                <input type="hidden" name="UnLike" value="1">
+                <input type="hidden" name="ProductID"
+                <input id="UnLike" class="icon-heart UnLike" type="submit" name="btnUnLike" value="Unlike">
+            </form>
             <div><a href="#" id="like" class="icon-heart like">&nbsp;Like</a></div>
             <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
         </div>
     </article>
-    <article class="item">
-       <figure class="product-image">
-            <img src="" alt="Product Name" />
-        </figure>
-        <h2 class="product-title">
-            <a href="#">Product Title</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: 2
-        </h3>
-        <div class="product-price">
-            <p class="price">
-                $200.00
-            </p>
-        </div>
-        <div class="votes">
-            <div><a href="#" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
-        </div>
-    </article>
-    <article class="item">
-       <figure class="product-image">
-            <img src="" alt="Product Name" />
-        </figure>
-        <h2 class="product-title">
-            <a href="#">Product Title</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: 2
-        </h3>
-        <div class="product-price">
-            <p class="price">
-                $200.00
-            </p>
-        </div>
-        <div class="votes">
-            <div><a href="#" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
-        </div>
-    </article>
-    <article class="item">
-       <figure class="product-image">
-            <img src="" alt="Product Name" />
-        </figure>
-        <h2 class="product-title">
-            <a href="#">Product Title</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: 2
-        </h3>
-        <div class="product-price">
-            <p class="price">
-                $200.00
-            </p>
-        </div>
-        <div class="votes">
-            <div><a href="#" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
-        </div>
-    </article>
-    <article class="item">
-       <figure class="product-image">
-            <img src="" alt="Product Name" />
-        </figure>
-        <h2 class="product-title">
-            <a href="#">Product Title</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: 2
-        </h3>
-        <div class="product-price">
-            <p class="price">
-                $200.00
-            </p>
-        </div>
-        <div class="votes">
-            <div><a href="#" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
-        </div>
-    </article>
-    <article class="item">
-       <figure class="product-image">
-            <img src="" alt="Product Name" />
-        </figure>
-        <h2 class="product-title">
-            <a href="#">Product Title</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: 2
-        </h3>
-        <div class="product-price">
-            <p class="price">
-                $200.00
-            </p>
-        </div>
-        <div class="votes">
-            <div><a href="#" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
-        </div>
-    </article>
+    {% empty %}
+    <article>Aún no hay productos registrados</article>
+    {% endfor %}
 {% endblock %}
