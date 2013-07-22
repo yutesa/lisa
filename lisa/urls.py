@@ -17,5 +17,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'yutesapp.views.inicio'),
     url(r'^Products/', 'yutesapp.views.Productos'),
-    url(r'^Products/AddLike$', 'yutesapp.views.DarLike', name='DarLike'),
+    url(r'^Products2/AddLike/', 'yutesapp.views.DarLike', name='DarLike'),
 )

@@ -1,12 +1,12 @@
 $(function(){
-	$('#frmUbicacion').submit(function(e){
+	$('#frmLike').submit(function(e){
 		e.preventDefault();
 
-		$.post('/sistema/ubicacion/add', $(this).serialize(), function(data){
+		$.post('/Products2/AddLike/', $(this).serialize(), function(data){
 			if (data.codigo == 1)
 			{
 				alert(data.msg);
-				document.location = '/sistema/mis_ubicaciones/';
+				document.location = '/Products/YaLike/';
 			} else if (data.codigo == 2) {
 				alert(data.msg);
 			}

@@ -19,14 +19,16 @@
             </p>
         </div>
         <div class="votes">
-            <form id="frmLike" method="post" action="AddLike">
-                <input type="hidden" name="Like" value="1">
-                <input type="hidden" name="ProducID"
+            <form id="frmLike" name="frmLike" method="post" action="/Products2/AddLike/">{% csrf_token %}
+                <input type="hidden" name="UserLikeUnlikeUserId" value="1">
+                <input type="hidden" name="UserLikeUnlikeProductId" value="{{dato.ProductId}}">
+                <input type="hidden" name="UserLikeUnlikeType" value="2">
                 <input id="like" class="icon-heart like" type="submit" name="btnLike" value="Like">
             </form>
-            <form id="frmUnLike" method="post" action="AddUnLike">
-                <input type="hidden" name="UnLike" value="1">
-                <input type="hidden" name="ProductID"
+            <form name="frmUnLike" method="post" action="AddUnLike">
+                <input type="hidden" name="UserLikeUnlikeUserId" value="1">
+                <input type="hidden" name="UserLikeUnlikeProductId" value="{{dato.ProductId}}">
+                <input type="hidden" name="UserLikeUnlikeType" value="2">
                 <input id="UnLike" class="icon-heart UnLike" type="submit" name="btnUnLike" value="Unlike">
             </form>
             <div><a href="#" id="like" class="icon-heart like">&nbsp;Like</a></div>
