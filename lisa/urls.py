@@ -18,4 +18,7 @@ urlpatterns = patterns('',
     url(r'^$', 'yutesapp.views.inicio'),
     url(r'^Products/', 'yutesapp.views.Productos'),
     url(r'^Products2/AddLike/', 'yutesapp.views.DarLike', name='DarLike'),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root':settings.MEDIA_ROOT},
+        ),
 )
