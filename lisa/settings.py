@@ -16,8 +16,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'lisa_estore.db',                      # Or path to database file if using sqlite3.
+=======
+        'ENGINE': '', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+>>>>>>> fa2e4ee8b882759d8cdb8278c31ff6d921140697
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
