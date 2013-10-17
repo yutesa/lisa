@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
-{% block titulo %} Productos {% endblock %}
+{% block titulo %} Yutesa | Productos {% endblock %}
 
 {% block contenido %}
-    {% for dato in datos %}
-    <article class="item">
-       <figure class="product-image">
-            <img src="{{MEDIA_URL}}{{dato.ProductImage}}" alt="Product Name" />
+{% for dato in datos %}
+<article class="item">
+    <div class="product-description">
+        <figure>
+            <img class="product-image" src="{{MEDIA_URL}}{{dato.ProductImage}}" alt="Product Name" />
         </figure>
-        <h2 class="product-title">
+
+        <p class="product-title">
             <a href="#">{{dato.ProductName}}</a>
-        </h2>
-        <h3 class="product-stock">
-            Disponible: {{dato.ProductQuantity}}
-        </h3>
+        </p>
         <div class="product-price">
             <p class="price">
                 ${{dato.ProductPrice}}
             </p>
         </div>
         <div class="votes">
-            <form id="frmLike" name="frmLike" method="post" action="/Products2/AddLike/">{% csrf_token %}
+           <!--  <form id="frmLike" name="frmLike" method="post" action="/Products2/AddLike/">{% csrf_token %}
                 <input type="hidden" name="UserLikeUnlikeUserId" value="1">
                 <input type="hidden" name="UserLikeUnlikeProductId" value="{{dato.ProductId}}">
                 <input type="hidden" name="UserLikeUnlikeType" value="2">
@@ -30,12 +29,13 @@
                 <input type="hidden" name="UserLikeUnlikeProductId" value="{{dato.ProductId}}">
                 <input type="hidden" name="UserLikeUnlikeType" value="2">
                 <input id="UnLike" class="icon-heart UnLike" type="submit" name="btnUnLike" value="Unlike">
-            </form>
-            <div><a href="#" id="like" class="icon-heart like">&nbsp;Like</a></div>
-            <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div>
+            </form> -->
+            <div><a href="#" id="like" class="icon-heart like">&nbsp;Compartir</a></div>
+            <!-- <div><a href="#" class="icon-heart-2 UnLike">&nbsp;Unlike</a></div> -->
         </div>
-    </article>
-    {% empty %}
-    <article>Aún no hay productos registrados</article>
-    {% endfor %}
+    </div>
+</article>
+{% empty %}
+<article>Aún no hay productos registrados</article>
+{% endfor %}
 {% endblock %}
